@@ -22,7 +22,7 @@ const AboutUser = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white rounded-2xl shadow-lg p-8 w-80 text-center">
         <img
-          src={user.photoURL || ""}
+          src={user.photoURL }
           alt="Profile"
           className="w-24 h-24 mx-auto rounded-full border-2 border-blue-400 object-cover shadow-md"
         />
@@ -30,6 +30,7 @@ const AboutUser = () => {
           {user.displayName}
         </h2>
         <p className="mt-2 text-gray-500">{user.email}</p>
+        <p className="mt-2 text-gray-500">UID: {user.uid}</p>
         <button
           onClick={handleLogout}
           className="mt-6 w-full bg-blue-300 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-lg transition"

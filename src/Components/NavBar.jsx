@@ -60,7 +60,7 @@ const NavBar = ({ isAuth, setIsAuth }) => {
                   About
                 </Link>
                 <img
-                  src={profile || ""}
+                  src={profile}
                   alt="Profile"
                   className="w-10 h-10 rounded-full border-2 border-blue-400 shadow-md object-cover"
                   onClick={userDetails}
@@ -75,7 +75,7 @@ const NavBar = ({ isAuth, setIsAuth }) => {
             )}
           </div>
           <button
-            className="md:hidden text-2xl text-gray-700"
+            className="md:hidden text-3xl text-blue-400"
             onClick={() => setOpen(!open)}
           >
             ☰
@@ -129,9 +129,10 @@ const NavBar = ({ isAuth, setIsAuth }) => {
                 About
               </Link>
               <img
-                src={profile || ""}
+                src={profile}
                 alt="Profile"
                 className="w-15 h-15 rounded-full border-2 border-blue-400 shadow-md object-cover"
+                onClick={userDetails}
               />
               <button
                 onClick={() => {
